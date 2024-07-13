@@ -10,8 +10,8 @@ const questions = [
     {
 
         type: "text",
-        message: "What is the #Title of your project",
-        name: title,
+        message: "What is the #Title of your project?",
+        name: "title",
 
     },
     //Description
@@ -19,28 +19,41 @@ const questions = [
 
         type: "text",
         message: "What is the ##Description for your project?",
-        name: description,
+        name: "description",
 
     },
-
-    
-
-
-    
-
-    
     //Steps for Installation
+    {
 
+        type: "text",
+        message: "Please explain ##How-to-Install your application.",
+        name: "howToInstall",
 
+    },
     //Usage
+    {
 
+        type: "text",
+        message: "Please explain proper ##Usage of your application.",
+        name: "usage",
 
+    },
     //Credits
+    {
 
+        type: "text",
+        message: "Who is to receive ##Credit for this work so far?",
+        name: "credits",
 
+    },
     //License
+    {
 
+        type: "list",
+        message: "Please select a license type:",
+        name: "license",
 
+    },
     //Features
 
 

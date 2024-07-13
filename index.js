@@ -59,7 +59,7 @@ const questions = [
             "MIT",
             "Open Software License",
             "None",
-        ]
+        ],
 
     },
     //Features
@@ -86,13 +86,24 @@ const questions = [
         name: 'contact',
 
     },
+    {
+
+        type: "text",
+        message: "Any instructions for ##Testing?",
+        name: "test",
+    }
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, function() { console.log("Error has occured!")});
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    console.log("Any section you wish to leave out for the moment, leave the answer blank!");
+    inq.prompt(questions).then((response) => writeToFile("readme.md", genMark.generateMarkdown(response)));
+}
 
 // Function call to initialize app
 init();

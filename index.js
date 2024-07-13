@@ -2,13 +2,31 @@
 const fs = require('fs');
 const inq = require('inquirer');
 
+const genMark = require('./utils/generateMarkdown');
+
 // TODO: Create an array of questions for user input
 const questions = [
+        //Project title
+    {
 
-    //Project title
+        type: "text",
+        message: "What is the #Title of your project",
+        name: title,
 
-
+    },
     //Description
+    {
+
+        type: "text",
+        message: "What is the ##Description for your project?",
+        name: description,
+
+    },
+
+    
+
+
+    
 
     
     //Steps for Installation

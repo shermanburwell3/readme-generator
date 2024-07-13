@@ -1,2 +1,8 @@
 # readme-gneerator
-A terminal-based project for generating a professional readme
+
+## Description
+A terminal-based project for generating a professional readme.
+
+## Credits
+List of licenses provided by GitHub.
+https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository

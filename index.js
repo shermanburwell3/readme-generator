@@ -52,19 +52,40 @@ const questions = [
         type: "list",
         message: "Please select a license type:",
         name: "license",
+        choices: [
+            "Academic Free License",
+            "Artistic License",
+            "Creative Commons",
+            "MIT",
+            "Open Software License",
+            "None",
+        ]
 
     },
     //Features
+    {
 
+        type: "text",
+        message: "Please expalin the ##Features of your application.",
+        name: 'features',
 
+    },
     //Contribution Guidelines
+    {
 
+        type: "text",
+        message: "Please provide any ##Contribution Guidlines for your application.",
+        name: 'contributionGuidelines',
 
+    },
     //Questions and Contact Info
+    {
 
+        type: "text",
+        message: "Please provide any ##Contact information.",
+        name: 'contact',
 
-    //License
-    
+    },
 ];
 
 // TODO: Create a function to write README file

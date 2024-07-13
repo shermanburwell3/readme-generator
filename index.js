@@ -2,7 +2,7 @@
 const fs = require('fs');
 const inq = require('inquirer');
 
-const genMark = require('./utils/generateMarkdown');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -102,7 +102,7 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     console.log("Any section you wish to leave out for the moment, leave the answer blank!");
-    inq.prompt(questions).then((response) => writeToFile("readme.md", genMark.generateMarkdown(response)));
+    inq.prompt(questions).then((response) => writeToFile("test.md", generateMarkdown(response)));
 }
 
 // Function call to initialize app

@@ -53,11 +53,11 @@ const questions = [
         message: "Please select a license type:",
         name: "license",
         choices: [
-            "Academic Free License",
+            "Apache 2.0",
             "Artistic License",
             "Creative Commons",
             "MIT",
-            "Open Software License",
+            "The Unlicense",
             "None",
         ],
 

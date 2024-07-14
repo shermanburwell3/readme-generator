@@ -1,7 +1,20 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  let badge;
 
+  switch (license) {
+  case "Apache 2.0":
+    badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`;
+    break;
+  case "Artistic License":
+    badge = `[![License: Artistic-2.0](https://img.shields.io/badge/License-Artistic_2.0-0298c3.svg)](https://opensource.org/licenses/Artistic-2.0)`;
+    break;
+
+
+  }
+
+  return ``;
 }
 
 // TODO: Create a function that returns the license link
@@ -20,7 +33,7 @@ function generateMarkdown(data) {
 
   // TODO: Pass the license into each of the license functions in string literal here
   return `# ${title}
-  ${renderLicenseBadge}
+  ${renderLicenseBadge(license)}
 
 
 

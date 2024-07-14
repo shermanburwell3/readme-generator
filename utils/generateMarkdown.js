@@ -74,19 +74,19 @@ function generateMarkdown(data) {
   let {title, description, howToInstall, usage, credits, license, features, contributionGuidelines, contact, test} = data;
   let tableOfContents = "";
   if (description.length > 0) {
-    tableOfContents += `\n${description}`;
+    tableOfContents += `\n[Description](#description)`;
     description = `## Description
     
     ${description}`;
   }
   if (howToInstall.length > 0) {
-    tableOfContents += `\n${howToInstall}`;
+    tableOfContents += `\n[How to Install](#how-to-install)`;
     howToInstall = `## How To Install
     
     ${howToInstall}`;
   }
   if (usage.length > 0) {
-    tableOfContents += `\n${usage}`;
+    tableOfContents += `\n[Usage](#usage)`;
     usage = `## Usage
     
     ${usage}`;

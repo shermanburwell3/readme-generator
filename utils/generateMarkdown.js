@@ -123,16 +123,17 @@ function generateMarkdown(data) {
   ${renderLicenseBadge(license)}
 
   ${tableOfContents}
-
+  
   ${description}
-
+  ${howToInstall}
+  ${usage}
+  ${credits}
   ${renderLicenseSection(license)}
   ${renderLicenseLink(license)}
-
-
-
-  
-
+  ${features}
+  ${contributionGuidelines}
+  ${contact}
+  ${test}
 `;
 }
 

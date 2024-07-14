@@ -31,36 +31,27 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license !== "None") {
-    return;
+  let link = '';
+  switch (license) {
+    case "Apache 2.0":
+      link = `[${license}](https://opensource.org/licenses/Apache-2.0)`;
+      break;
+    case "Artistic License":
+      link = `[${license}](https://opensource.org/licenses/Artistic-2.0)`;
+      break;
+    case "Creative Commons":
+      link = `[${license}](http://creativecommons.org/publicdomain/zero/1.0/)`;
+      break;
+    case "MIT":
+      link = `[${license}](https://opensource.org/licenses/MIT)`;
+      break;
+    case "The Unlicense":
+      link = `[${license}](http://unlicense.org/)`;
+      break;
+    default:
+      link = '';
   }
-  else {
-    let link;
-    switch (license) {
-      case "Apache 2.0":
-        link = `(https://opensource.org/licenses/Apache-2.0)`;
-        break;
-      case "Artistic License":
-        link = `(https://opensource.org/licenses/Artistic-2.0)`;
-        break;
-      case "Creative Commons":
-        link = `(http://creativecommons.org/publicdomain/zero/1.0/)`;
-        break;
-      case "MIT":
-        link = `(https://opensource.org/licenses/MIT)`
-        break;
-      case "The Unlicense":
-        link = `(http://unlicense.org/)`;
-        break;
-      case "None":
-        link = ``;
-      default:
-        link = ``;
-
-
-    }
-    return `${link}`;
-  }
+  return link;
 }
 
 // TODO: Create a function that returns the license section of README
@@ -68,7 +59,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   
   if (license === "None") {
-    return;
+    return '';
   }
   else {
     return `## License
@@ -81,17 +72,57 @@ Distributed under the ${license} license. See \`license.txt\` for more informati
 function generateMarkdown(data) {
   //Set up variables to determine usage
   let {title, description, howToInstall, usage, credits, license, features, contributionGuidelines, contact, test} = data;
-
+  let tableOfContents = "";
   if (description.length > 0) {
+    tableOfContents += `\n${description}`;
     description = `## Description
     
-${description}`;
-
+    ${description}`;
   }
+  if (howToInstall.length > 0) {
+    tableOfContents += `\n${howToInstall}`;
+    howToInstall = `## How To Install
+    
+    ${howToInstall}`;
+  }
+  if (usage.length > 0) {
+    tableOfContents += `\n${usage}`;
+    usage = `## Usage
+    
+    ${usage}`;
+  }
+  if (credits.length > 0) {
+    credits = `## Credits
+    
+    ${credits}`;
+  }
+  if (features.length > 0) {
+    features = `## Features
+    
+    ${features}`;
+  }
+  if (contributionGuidelines.length > 0) {
+    usage = `## Contribution Guidelines
+    
+    ${contributionGuidelines}`;
+  }
+  if (constact.length > 0) {
+    contact = `## Usage
+    
+    ${contact}`;
+  }
+  if (test.length > 0) {
+    test = `## Usage
+    
+    ${test}`;
+  }
+}
 
   // TODO: Pass the license into each of the license functions in string literal here
   return `# ${title}
   ${renderLicenseBadge(license)}
+
+  ${tableOfContents}
 
   ${description}
 

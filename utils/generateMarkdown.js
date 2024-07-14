@@ -35,11 +35,31 @@ function renderLicenseLink(license) {
     return;
   }
   else {
+    let link;
     switch (license) {
+      case "Apache 2.0":
+        link = `(https://opensource.org/licenses/Apache-2.0)`;
+        break;
+      case "Artistic License":
+        link = `(https://opensource.org/licenses/Artistic-2.0)`;
+        break;
+      case "Creative Commons":
+        link = `(http://creativecommons.org/publicdomain/zero/1.0/)`;
+        break;
+      case "MIT":
+        link = `(https://opensource.org/licenses/MIT)`
+        break;
+      case "The Unlicense":
+        link = `(http://unlicense.org/)`;
+        break;
+      case "None":
+        link = ``;
+      default:
+        link = ``;
 
 
-      
     }
+    return `${link}`;
   }
 }
 

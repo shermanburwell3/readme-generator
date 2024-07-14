@@ -72,7 +72,7 @@ Distributed under the ${license} license. See \`license.txt\` for more informati
 function generateMarkdown(data) {
   //Set up variables to determine usage
   let {title, description, howToInstall, usage, credits, license, features, contributionGuidelines, contact, test} = data;
-  let tableOfContents = "";
+  let tableOfContents = "##Table of Contents";
   if (description.length > 0) {
     tableOfContents += `\n[Description](#description)`;
     description = `## Description
@@ -106,7 +106,7 @@ function generateMarkdown(data) {
     
     ${contributionGuidelines}`;
   }
-  if (constact.length > 0) {
+  if (contact.length > 0) {
     contact = `## Usage
     
     ${contact}`;
@@ -116,7 +116,7 @@ function generateMarkdown(data) {
     
     ${test}`;
   }
-}
+
 
   // TODO: Pass the license into each of the license functions in string literal here
   return `# ${title}

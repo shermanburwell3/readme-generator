@@ -72,47 +72,61 @@ Distributed under the ${license} license. See \`license.txt\` for more informati
 function generateMarkdown(data) {
   //Set up variables to determine usage
   let {title, description, howToInstall, usage, credits, license, features, contributionGuidelines, contact, test} = data;
-  let tableOfContents = "##Table of Contents";
+  let tableOfContents = `## Table of Contents
+  `;
   if (description.length > 0) {
-    tableOfContents += `\n[Description](#description)`;
+    tableOfContents += `
+    [Description](#description)`;
     description = `## Description
     
     ${description}`;
   }
   if (howToInstall.length > 0) {
-    tableOfContents += `\n[How to Install](#how-to-install)`;
+    tableOfContents += `\\
+    [How to Install](#how-to-install)`;
     howToInstall = `## How To Install
     
     ${howToInstall}`;
   }
   if (usage.length > 0) {
-    tableOfContents += `\n[Usage](#usage)`;
+    tableOfContents += `\\
+    [Usage](#usage)`;
     usage = `## Usage
     
     ${usage}`;
   }
   if (credits.length > 0) {
+    tableOfContents += `\\
+    [Credits](#credits)`;
     credits = `## Credits
     
     ${credits}`;
   }
   if (features.length > 0) {
+    tableOfContents += `\\
+    [Features](#features)`;
     features = `## Features
     
     ${features}`;
   }
   if (contributionGuidelines.length > 0) {
+    tableOfContents += `\\
+    [Contribution Guidelines](#contribution-guidelines)`;
     usage = `## Contribution Guidelines
     
     ${contributionGuidelines}`;
   }
   if (contact.length > 0) {
-    contact = `## Usage
+    tableOfContents += `\\
+    [Contact](#contact)`;
+    contact = `## Contact
     
     ${contact}`;
   }
   if (test.length > 0) {
-    test = `## Usage
+    tableOfContents += `\\
+    [Testing](#testing)`;
+    test = `## Testing
     
     ${test}`;
   }

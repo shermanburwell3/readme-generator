@@ -3,6 +3,10 @@
 ## Description
 A terminal-based project for generating a professional readme.
 
+## Walkthrough Video
+
+https://drive.google.com/file/d/1UWPtxiPjbE15zqyLaGJUHL5zBqD8AMRw/view
+
 ## How to Install
 
 1. Ensure you have Node.js installed on your computer.

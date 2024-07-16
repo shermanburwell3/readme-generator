@@ -76,56 +76,56 @@ function generateMarkdown(data) {
   `;
   if (description.length > 0) {
     tableOfContents += `
-    [Description](#description)`;
+  [Description](#description)`;
     description = `## Description
     
     ${description}`;
   }
   if (howToInstall.length > 0) {
     tableOfContents += `\\
-    [How to Install](#how-to-install)`;
+  [How to Install](#how-to-install)`;
     howToInstall = `## How To Install
     
     ${howToInstall}`;
   }
   if (usage.length > 0) {
     tableOfContents += `\\
-    [Usage](#usage)`;
+  [Usage](#usage)`;
     usage = `## Usage
     
     ${usage}`;
   }
   if (credits.length > 0) {
     tableOfContents += `\\
-    [Credits](#credits)`;
+  [Credits](#credits)`;
     credits = `## Credits
     
     ${credits}`;
   }
   if (features.length > 0) {
     tableOfContents += `\\
-    [Features](#features)`;
+  [Features](#features)`;
     features = `## Features
     
     ${features}`;
   }
   if (contributionGuidelines.length > 0) {
     tableOfContents += `\\
-    [Contribution Guidelines](#contribution-guidelines)`;
+  [Contribution Guidelines](#contribution-guidelines)`;
     usage = `## Contribution Guidelines
     
     ${contributionGuidelines}`;
   }
   if (contact.length > 0) {
     tableOfContents += `\\
-    [Contact](#contact)`;
+  [Contact](#contact)`;
     contact = `## Contact
     
     ${contact}`;
   }
   if (test.length > 0) {
     tableOfContents += `\\
-    [Testing](#testing)`;
+  [Testing](#testing)`;
     test = `## Testing
     
     ${test}`;

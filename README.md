@@ -9,9 +9,9 @@ A terminal-based project for generating a professional readme.
 
 2. Clone the code from this GitHub repository using your preferred method of cloning.
 
-3. in the root folder (with the file named "index.js") run "npm install"
+3. in the root folder (with the file named "index.js") run "npm install" in your preferred command line.
 
-4. Run the code with "node index.js"
+4. Run the code with "node index.js" in you preferred command line.
 
 ## Usage
 
